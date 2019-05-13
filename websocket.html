@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>WebSocket Connection</title>
+  <script language="javascript" type="text/javascript">
+
+  var wsUri = "wss://echo.websocket.org/";
+  var output;
+
+  function init()
+  {
+    output = document.getElementById("output");
+    testWebSocket();
+  }
+
+  function testWebSocket()
+  {
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = function(evt) { onOpen(evt) };
+    websocket.onclose = function(evt) { onClose(evt) };
+    websocket.onmessage = function(evt) { onMessage(evt) };
+    websocket.onerror = function(evt) { onError(evt) };
+  }
+
+  function onOpen(evt)
+  {
+    writeToScreen("CONNECTING...");
+    writeToScreen("Sending Message...");
+    doSend("WebSocket feature in HTML5 is awesome!");
+  }
+
+  function onClose(evt)
+  {
+    writeToScreen("DISCONNECTING...");
+  }
+
+  function onMessage(evt)
+  {
+    writeToScreen('<span style="color: green;">RECEIVED MESSAGE: ' + evt.data+'</span>');
+    websocket.close();
+  }
+
+  function onError(evt)
+  {
+    writeToScreen('<span style="color: red;">ERROR:</span> ' + evt.data);
+  }
+
+  function doSend(message)
+  {
+    writeToScreen("SENT: " + message);
+    websocket.send(message);
+  }
+
+  function writeToScreen(message)
+  {
+    var pre = document.createElement("p");
+    pre.style.wordWrap = "break-word";
+    pre.innerHTML = message;
+    output.appendChild(pre);
+  }
+
+  window.addEventListener("load", init, false);
+
+  </script>
+</head>
+<body>
+
+	<header>
+	<h1>Pure HTML5 and CSS Examples</h1>  
+	<h3>Data source is NASA free videos for education and personal use</h>  
+
+  <nav id="fixedbar" class="topnav">
+    <ul id="fixednav">  
+      <li><a href="websocket.html">Websocket Connection</a></li>      
+      <li><a href="HorizontalAccordion.html">Horizontal Accordion</a></li>
+      <li><a href="index.html">Vertical Accordion</a></li>      
+    </ul>
+  </nav>
+    </header>
+	
+
+  <h3>WebSocket Sample Test Connection</h3>
+  
+  <div class="horizontalaccordion">
+  	<div id="output"></div>
+  </div>
+  
+  <div class="footer">
+	  <p>Posted by: Leena Rex</p> 
+	  <p>© Copyright Leena Rex</p>
+	   <p>Contact information: <a href="mailto:rex317@gmail.com">
+	  rex317@gmail.com</a>.</p>
+  </div>
+  
+  </body>
+  </html>
+          

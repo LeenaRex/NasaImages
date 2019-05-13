@@ -1,0 +1,293 @@
+html { 
+  background: #4b5e70; 
+  background-size: cover;
+}
+body { 
+  color: white; 
+}
+
+body {margin:0;}
+
+.topnav {
+  overflow: hidden;
+  
+  
+}
+
+.topnav a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  color: white; 
+
+}
+
+.topnav a:hover {  
+  /*color: #15186d;*/
+  color: #C0C0C0;
+}
+
+.topnav a.active {
+    background-color: #77cfef;
+    color: white;
+}
+
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+h3 {
+    font-style: italic;
+}
+
+article.accordion
+{
+	float: left;
+	background-color: transparent;
+	display: block;
+	width: 100%;
+	padding: 0.5em 0.5em 1px 0.5em;
+	margin: 0 auto;
+	
+	border-radius: 5px;
+	
+}
+
+article.accordion section
+{
+	display: block;
+	background-color: transparent;	
+	width: 28em;
+	height: 2em;	
+	padding: 0 1em;
+	margin: 0 0 0.5em 0;
+	color: #333;
+	
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+article.accordion section h2
+{
+	font-size: 1em;
+	font-weight: bold;
+	width: 100%;
+	line-height: 2em;
+	padding: 0;
+	margin: 0;
+	color: #ddd;
+}
+
+article.accordion section h2 a
+{
+	display: block;
+	width: 100%;
+	line-height: 2em;
+	text-decoration: none;
+	color: inherit;
+	outline: 0 none;
+}
+
+article.accordion section:target
+{
+	height: 20em;
+	
+	background-color: transparent;
+}
+
+article.accordion section:target h2
+{
+	font-size: 1.6em;
+	color: #333;
+}
+
+article.accordion section,
+article.accordion section h2
+{
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.horizontalaccordion>ul {
+	
+    margin: 0;
+   /* padding: 0;*/
+     padding-left: 100px;
+    list-style:none;
+    height: 300px;
+}
+ 
+.horizontalaccordion>ul>li {
+
+    display:block;
+ overflow: hidden;
+    float:left;
+    margin: 0;
+    padding: 0;    
+    list-style:none;
+ width:40px;
+ height: 300px;
+ text-align: center;
+    /* Decorative CSS 
+    background:#f0f0f0;*/
+    background-color: transparent;
+ 
+    /* CSS3 Transitions */
+    transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+      text-align: left;
+}
+ 
+.horizontalaccordion>ul>li>h3 {
+    display:block;
+    float:left;
+    margin: 0;
+    padding:20px;
+    height:10px;
+    width:280px;
+ 
+    /* Decorative CSS */
+    /* border-left:#f0f0f0 1px solid;*/
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none;
+    text-transform:uppercase;
+    color: #000;
+   
+    /*background:#cccccc;*/
+   
+    
+ 
+    /* CSS3 Transform Rotate & Translate */
+    white-space:nowrap;
+    -moz-transform: rotate(90.0deg) translate(-40px,0px);  /* FF3.5+ */
+    -moz-transform-origin: 0 100%;
+    -o-transform: rotate(90.0deg) translate(-40px,0px);  /* Opera 10.5 */
+    -o-transform-origin: 0 100%;
+    -webkit-transform: rotate(90.0deg) translate(-40px,0px);  /* Saf3.1+, Chrome */
+    -webkit-transform-origin: 0 100%;
+    transform: rotate(90.0deg) translate(-40px,0px);  /* Saf3.1+, Chrome */
+    transform-origin: 0 100%;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1.0)
+            progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc);  /* IE6,IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1.0)"
+                "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff999999, endColorstr=#ffcccccc)"; /* IE8 */
+ 
+    /* CSS3 Gradient Effect 
+    background: -moz-linear-gradient( top, #999999, #cccccc);
+    background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#cccccc));*/
+    
+    background: linear-gradient(70deg,#4b5e70, grey);
+  
+}
+ 
+.horizontalaccordion>ul>li>div {
+    display:none;
+    float:left;
+ overflow: auto;
+    position:relative;
+    top:-40px;
+    left:40px;
+    *top:0px;       /* IE7 Hack */
+    *left:0px;      /* IE7 Hack */
+    margin:0;
+    width:320px;
+    height:280px;
+    padding:10px;
+      
+    
+}
+ 
+.horizontalaccordion>ul>li:hover {
+    overflow: hidden;
+ width: 580px;
+ padding-left: 50px;
+
+}
+ 
+.horizontalaccordion:hover>ul>li:hover>div {
+    display:block;
+   
+    
+}
+ 
+.horizontalaccordion:hover>ul>li:hover>h3 {
+    /* Decorative CSS */
+    color:#fff;
+    background:#000000;
+ 
+    /* CSS3 Gradient Effect */
+    background: -moz-linear-gradient( top, #454545, #000000); /* FF, Flock */
+    background: -webkit-gradient(linear, left top, left bottom, from(#454545), to(#000000)); /* Safari, Chrome */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1.0)
+            progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000); /* IE 5.5 - IE 7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1.0)"
+                "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff454545, endColorstr=#ff000000)";   /* IE 8 */
+}
+ 
+.horizontalaccordion>ul>li>h3:hover {
+    cursor:pointer;
+}
+
+/* 2 Column layout */
+*{
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+   /*  height: 300px; Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* header */
+header {
+    background-color: #333;
+    float: center;
+    text-align: center;
+    width: 100%;
+    /*bottom: 0;*/
+    position: relative;
+  
+}
+
+/* footer */
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #333;
+  text-align: center;
+}

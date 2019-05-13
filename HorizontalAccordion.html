@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+</head>
+<body>
+
+	<header>
+	<h1>Pure HTML5 and CSS Examples</h1>  
+	<h3>Data source is NASA free videos for education and personal use</h>  
+
+  <nav id="fixedbar" class="topnav">
+    <ul id="fixednav">   
+      <li><a href="websocket.html">Websocket Connection</a></li>     
+      <li><a href="HorizontalAccordion.html">Horizontal Accordion</a></li>
+      <li><a href="index.html">Vertical Accordion</a></li>      
+    </ul>
+  </nav>
+    </header>
+
+
+
+   <h3>Horizontal Accordion with videos(click on a panel below)</h3>
+
+	<div class="horizontalaccordion">
+		<ul>
+ 			<li>
+       			<h3>Chandra</h3>
+  				<video controls poster="images\Videos\chandra.png" width="100%" height="85%">
+  				<source src="images\Videos\chandra.mp4" type="video/mp4">  
+				Your browser does not support the video tag.
+				</video>
+			</li>
+			
+			 <li>
+        		<h3>Visit to Pluto</h3>
+  				<video controls poster="images/Videos/pluto.png" width="100%" height="85%">
+  				<source src="images\Videos\VisitToPluto.mp4" type="video/mp4">  
+				Your browser does not support the video tag.
+				</video>
+ 		</li>
+		 <li>
+        		<h3>Canada Aurora</h3>
+  				<video controls poster="images\Videos\still_jsc2017.png" width="100%" height="85%">
+  				<source src="images\Videos\jsc2017m001088_Top-17-Earth-Images-of-2017-MP4.mp4" type="video/mp4">  
+				Your browser does not support the video tag.
+				</video>
+ 		</li>
+ 		<li>
+        	<h3>Smallest Planet</h3>
+  			<video controls poster="images\Videos\SmallestTerrestrialPlanet.png" width="100%" height="85%">
+  				<source src="images\Videos\40_SmallestTerrestrialPlanetsmall.mp4" type="video/mp4">  
+				Your browser does not support the video tag.
+			</video>
+ 		</li>
+		 <li>
+        	<h3>Star With Spiral Arms</h3>
+        	<video controls  poster="images\Videos\StarWithSpiralArms.png" width="100%" height="85%">
+  				<source src="images\Videos\34_StarSpiralArmssmall.mp4" type="video/mp4">  
+				Your browser does not support the video tag.
+			</video>
+ 			
+ 		</li>
+	</ul>
+	</div>
+</div>
+
+<h3>Horizontal Accordion with Text(click on a panel below)</h3>
+
+	<div class="horizontalaccordion">
+		<ul>
+ 			<li>
+       			<h3>Chandra</h3>
+       			<p> The Chandra X-ray Observatory is a Flagship-class space observatory.
+       			</p>
+  				
+			</li>
+			
+			 <li>
+        		<h3>Visit to Pluto</h3>
+  				<p> New Horizons Captures Record-Breaking Images in the Kuiper Belt.
+       			</p>
+ 		</li>
+		 <li>
+        		<h3>Canada Aurora</h3>
+  				<p> The Chandra X-ray Observatory is a Flagship-class space observatory.
+       			</p>
+ 		</li>
+ 		<li>
+        	<h3>Smallest Planet</h3>
+  			<p> The smallest planet ever seen beyond the solar system.
+       			</p>
+ 		</li>
+		 <li>
+        	<h3>Star With Spiral Arms</h3>
+        	<p> The first clear case of a star with spiral arms was found. 
+       			</p>
+ 			
+ 		</li>
+	</ul>
+	</div>
+</div>
+
+
+<div class="footer">
+  <p>Posted by: Leena Rex</p> 
+  <p>© Copyright Leena Rex</p>
+   <p>Contact information: <a href="mailto:rex317@gmail.com">
+  rex317@gmail.com</a>.</p>
+</div>
+
+
+</body>
+</html>

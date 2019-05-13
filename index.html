@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
+</head>
+<body>
+	<header>
+	<h1>Pure HTML5 and CSS Examples</h1>  
+	<h3>Data source is NASA free images for education and personal use</h>  
+
+  <nav id="fixedbar" class="topnav">
+    <ul id="fixednav"> 
+      <li><a href="websocket.html">Websocket Connection</a></li>       
+      <li><a href="HorizontalAccordion.html">Horizontal Accordion</a></li>
+      <li><a href="index.html">Vertical Accordion</a></li>
+    </ul>
+  </nav>
+    </header>
+
+
+<main>  
+  
+  <div class="row">
+   <h3>Two Column Vertical Accordion (click on text below)</h3>
+  	<div class="column" >
+ 	 <article class="accordion">
+
+		<section id="acc1">
+			<h2><a href="#acc1">Full Eclipse</a></h2>
+			<img src="images\Earth\eclipse_full_res_0.png" height="100%" width="100%"></img>
+		</section>
+	
+		<section id="acc2">
+			<h2><a href="#acc2">Full View of Earth</a></h2>
+			<img src="images\Earth\FullViewOfEarth.jpg"  height="100%" width="100%"></img>
+		</section>
+	
+		<section id="acc3">
+			<h2><a href="#acc3">South Polar Project Of Earth</a></h2>
+			<img src="images\Earth\SouthPolarProjectionOfEarth.jpg" height="100%" width="100%"></img>
+		</section>
+	
+		<section id="acc4">
+			<h2><a href="#acc4">Earth Living Creature</a></h2>
+			<img src="images\Earth\NASAEarthALivingCreature.jpg" height="100%" width="100%"></img>
+		</section>
+	
+		<section id="acc5">
+			<h2><a href="#acc5">Earth Surface By Expedition 37</a></h2>
+			<img src="images\Earth\EarthObservationByExpedition37.jpg" height="100%" width="100%"></img>
+		</section>   
+ 	</div>    
+
+  <div class="column" >
+     <article class="accordion">
+		<section id="acc6">
+			<h2><a href="#acc6">Earth Horizon</a></h2>
+			<img src="images\Earth\horizon.jpg" height="100%" width="100%"></img>
+		</section>
+	
+		<section id="acc7">
+			<h2><a href="#acc7">Cairo and Isreal At Night</a></h2>
+			<img src="images\Earth\CairoAndIsrealAtNight.jpg" height="100%" width="100%"></img>
+		</section>
+	
+		<section id="acc8">
+			<h2><a href="#acc8">South Africa At Night</a></h2>
+			<img src="images\Earth\SouthAfricaAtNight.jpg" height="100%" width="100%"></img>
+		</section>
+	
+		<section id="acc9">
+			<h2><a href="#acc9">Earth Observation At Night</a></h2>
+			<img src="images\Earth\NighttimeEarthObservation.jpg" height="100%" width="100%"></img>
+		</section>
+	
+		<section id="acc10">
+			<h2><a href="#acc10">Visible Earht at Night</a></h2>
+			<img src="images\Earth\Nasa Visible Earth.jpg" height="100%" width="100%"></img>
+		</section>
+  	</div>
+  </div>	
+ </article> 
+</main>
+
+<div class="footer">
+  <p>Posted by: Leena Rex</p> 
+  <p>© Copyright Leena Rex</p>
+   <p>Contact information: <a href="mailto:rex317@gmail.com">
+  rex317@gmail.com</a>.</p>
+</div>
+
+</body>
+
+
+</html>
